@@ -29,6 +29,8 @@ echo "$LENGTH"
 # write to ENV0_ENV
 # for each variable in env0.env-vars.json 
 for ((i = 0; i < LENGTH; i++)); do
+  echo "debug: ${KEYS[i]}:${VALUES[i]}"
+
   # check for environment id (UUID) format
   if [[ ${VALUES[i]} =~ ^\"\$\{env0:$UUID_REGEX:.*\}\"$ ]]; then
     echo ${KEYS[i]}:${VALUES[i]}
