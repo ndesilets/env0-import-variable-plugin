@@ -21,6 +21,10 @@ LENGTH=$(jq 'length' env0.env-vars.json)
 UUID_REGEX='[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
 
 echo "yeet"
+cat env0.env-vars.json
+echo "$KEYS"
+echo "$VALUES"
+echo "$LENGTH"
 
 # write to ENV0_ENV
 # for each variable in env0.env-vars.json 
